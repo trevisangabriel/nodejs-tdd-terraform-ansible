@@ -23,7 +23,7 @@ resource "aws_instance" "maquina_nodejs" {
 }
 
 
-resource "aws_security_group" "acessos_nodejs" {
+resource "aws_security_group" "allow_ssh" {
   name        = "acessos_nodejs"
   description = "acessos inbound traffic"
 

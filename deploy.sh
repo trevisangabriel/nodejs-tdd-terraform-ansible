@@ -16,7 +16,7 @@ echo "Aguardando criação de maquinas ..."
 sleep 10 # 10 segundos
 
 echo $"[ec2-nodejs]" > ../ansible/hosts # cria arquivo
-echo "$(~/terraform/terraform output | awk '{print $3;exit}')" >> ../ansible/hosts # captura output faz split de espaco e replace de ",
+echo "$(~/terraform/ output | awk '{print $3;exit}')" >> ../ansible/hosts # captura output faz split de espaco e replace de ",
 
 echo "Aguardando criação de maquinas ..."
 sleep 10 # 20 segundos
