@@ -3,10 +3,10 @@
 docker build -t didox/app-nodejs-validacao-cnpj -f Dockerfile .
 
 ## Build Docker and run
-docker run -d -p 80:3000 --name app-nodejs-validacao-cnpj didox/app-nodejs-validacao-cnpj
+docker run -d -p 3000:3000 --name app-nodejs-validacao-cnpj didox/app-nodejs-validacao-cnpj
 
 ## Build watch Docker
-docker run -it -p 80:3000 --name app-nodejs-validacao-cnpj didox/app-nodejs-validacao-cnpj
+docker run -it -p 3000:3000 --name app-nodejs-validacao-cnpj didox/app-nodejs-validacao-cnpj
 
 # Para parar o docker
 docker stop app-nodejs-validacao-cnpj
@@ -39,3 +39,6 @@ docker push didox/app-nodejs-validacao-cnpj
 
 # Publicar a imagem no docker hub, para o tag 
 docker push didox/app-nodejs-validacao-cnpj:0.0.1
+
+# Download da imagem no docker hub, na ultima versão
+docker pull didox/app-nodejs-validacao-cnpj
