@@ -26,7 +26,8 @@ resource "aws_instance" "maquina_nodejs" {
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "acessos inbound traffic"
-
+  vpc_id      = "vpc-0a62871521ff123ee"
+  
   ingress = [
     {
       description      = "SSH from VPC"
