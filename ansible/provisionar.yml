@@ -23,6 +23,7 @@
       with_items:
         - nginx
         - nodejs
+        - npm
 
     - name: "clone projeto"
       ansible.builtin.git:
