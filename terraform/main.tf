@@ -19,12 +19,12 @@ resource "aws_instance" "maquina_nodejs" {
   tags = {
     Name = "ec2-nodejs-gabriel"
   }
-    vpc_security_group_ids = ["${aws_security_group.acessos_nodejs.id}"]
+    vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
 }
 
-resource "aws_security_group" "acessos_nodejs" {
-  name        = "acessos_nodejs"
-  description = "acessos inbound traffic"
+resource "aws_security_group" "allow_ssh" {
+  name = "permitir_ssh_nodejs"
+  description = "Permitindo SSH para as maquina wordpress"
   vpc_id      = "vpc-0a62871521ff123ee"
 
   ingress = [
@@ -78,7 +78,7 @@ resource "aws_security_group" "acessos_nodejs" {
   ]
 
   tags = {
-    Name = "acessos_nodejs"
+    Name = "allow_ssh"
   }
 }
 
