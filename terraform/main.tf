@@ -19,11 +19,11 @@ resource "aws_instance" "maquina_nodejs" {
   tags = {
     Name = "ec2-nodejs-gabriel"
   }
-    vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
+    vpc_security_group_ids = ["${aws_security_group.acessos_nodejs.id}"]
 }
 
-resource "aws_security_group" "allow_ssh" {
-  name        = "maquina_nodejs"
+resource "aws_security_group" "acessos_nodejs" {
+  name        = "acessos_nodejs"
   description = "acessos inbound traffic"
   vpc_id      = "vpc-0a62871521ff123ee"
 
@@ -78,7 +78,7 @@ resource "aws_security_group" "allow_ssh" {
   ]
 
   tags = {
-    Name = "allow_ssh"
+    Name = "acessos_nodejs"
   }
 }
 
