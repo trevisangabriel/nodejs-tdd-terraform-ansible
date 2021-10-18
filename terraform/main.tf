@@ -22,12 +22,11 @@ resource "aws_instance" "maquina_nodejs" {
     vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
 }
 
-
 resource "aws_security_group" "allow_ssh" {
-  name        = "allow_ssh"
+  name        = "maquina_nodejs"
   description = "acessos inbound traffic"
   vpc_id      = "vpc-0a62871521ff123ee"
-  
+
   ingress = [
     {
       description      = "SSH from VPC"
