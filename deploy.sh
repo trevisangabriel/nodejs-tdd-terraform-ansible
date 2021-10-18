@@ -26,7 +26,7 @@ ansible-playbook -i hosts provisionar.yml -u ubuntu --private-key ~/Desktop/devo
 
 cd ../terraform
 
-open "http://$(~/terraform/terraform output | awk '{print $3;exit}' | sed -e "s/\"//g")"
+open "http://$(~/terraform output | awk '{print $3;exit}' | sed -e "s/\"//g")"
 
 # *** verifica se aplicação está de pé
 # sudo lsof -iTCP -sTCP:LISTEN -P | grep :3000

@@ -17,13 +17,13 @@ resource "aws_instance" "maquina_nodejs" {
     volume_size = 8
   }
   tags = {
-    Name = "ec2-java-gabriel"
+    Name = "ec2-nodejs-gabriel"
   }
-    vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+    vpc_security_group_ids = [aws_security_group.acessos_nodejs.id]
 }
 
 
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "acessos_nodejs" {
   name        = "acessos_nodejs"
   description = "acessos inbound traffic"
 
