@@ -7,10 +7,10 @@ docker tag trevisangabriel/app-nodejs-validacao-cnpj hub.docker.com/r/trevisanga
 docker push trevisangabriel/app-nodejs-validacao-cnpj
 docker rm app-nodejs-validacao-cnpj
 
-cd ~/projetos/nodejs-tdd-terraform-ansible
-~/projetos/nodejs-tdd-terraform-ansible/terraform init
-~/projetos/nodejs-tdd-terraform-ansible/terraform validate
-~/projetos/nodejs-tdd-terraform-ansible/terraform apply -auto-approve
+cd ~/projetos/nodejs-tdd-terraform-ansible/terraform/
+~/terraform init
+~/terraform validate
+~/terraform apply -auto-approve
 
 echo "Aguardando criação de maquinas ..."
 sleep 10 # 10 segundos
