@@ -19,7 +19,7 @@ resource "aws_instance" "maquina_nodejs" {
   tags = {
     Name = "ec2-nodejs-gabriel"
   }
-    vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
+  vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
 }
 
 output "aws_instance_e_ssh" {
