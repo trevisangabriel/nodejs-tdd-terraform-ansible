@@ -62,11 +62,11 @@
       become: yes
 
     - name: "Fazer pull do docker"
-      shell: "docker pull didox/app-nodejs-validacao-cnpj"
+      shell: "docker pull trevisangabriel/app-nodejs-validacao-cnpj"
       become: yes
 
     - name: "Roda o container"
-      shell: "docker run -d -p 3000:3000 --name app-nodejs-validacao-cnpj didox/app-nodejs-validacao-cnpj"
+      shell: "docker run -d -p 3000:3000 --name app-nodejs-validacao-cnpj trevisangabriel/app-nodejs-validacao-cnpj"
       become: yes
     
     - name: "Trocando nginx para ler a VPS"

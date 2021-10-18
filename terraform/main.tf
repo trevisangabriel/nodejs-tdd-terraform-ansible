@@ -7,14 +7,21 @@ data "http" "myip" {
 }
 
 resource "aws_instance" "maquina_nodejs" {
-  ami           = "ami-09e67e426f25ce0d7"
-  instance_type = "t2.micro"
-  key_name      = "treinamento-turma1_itau"
-  tags = {
-    Name = "maquina_ansible_com_nginx_e_nodejs"
+  subnet_id                   = "subnet-0e4c840c1e240f521"
+  ami                         = "ami-054a31f1b3bf90920"
+  instance_type               = "t2.micro"
+  key_name                    = "key-dev-gabriel"
+  associate_public_ip_address = true
+  root_block_device {
+    encrypted = true
+    volume_size = 8
   }
-  vpc_security_group_ids = [aws_security_group.acessos_nodejs.id]
+  tags = {
+    Name = "ec2-java-gabriel"
+  }
+    vpc_security_group_ids = [aws_security_group.acessos_nodejs.id]
 }
+
 
 resource "aws_security_group" "acessos_nodejs" {
   name        = "acessos_nodejs"

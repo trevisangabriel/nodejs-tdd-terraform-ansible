@@ -1,10 +1,10 @@
 cd itau-tdd-lab
-docker build -t didox/app-nodejs-validacao-cnpj -f Dockerfile .
-docker run -d -p 3000:3000 --name app-nodejs-validacao-cnpj didox/app-nodejs-validacao-cnpj
+docker build -t trevisangabriel/app-nodejs-validacao-cnpj -f Dockerfile .
+docker run -d -p 3000:3000 --name app-nodejs-validacao-cnpj trevisangabriel/app-nodejs-validacao-cnpj
 docker exec -it app-nodejs-validacao-cnpj npm run test
 docker stop app-nodejs-validacao-cnpj
-docker tag didox/app-nodejs-validacao-cnpj hub.docker.com/r/didox/app-nodejs-validacao-cnpj
-docker push didox/app-nodejs-validacao-cnpj
+docker tag trevisangabriel/app-nodejs-validacao-cnpj hub.docker.com/r/trevisangabriel/app-nodejs-validacao-cnpj
+docker push trevisangabriel/app-nodejs-validacao-cnpj
 docker rm app-nodejs-validacao-cnpj
 
 cd ../terraform
