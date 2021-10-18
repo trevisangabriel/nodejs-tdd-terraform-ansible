@@ -23,7 +23,7 @@ resource "aws_instance" "maquina_nodejs" {
 }
 
 resource "aws_security_group" "allow_ssh" {
-  name = "permitir_ssh_nodejs"
+  name = "ssh_nodejs"
   description = "Permitindo SSH para as maquina wordpress"
   vpc_id      = "vpc-0a62871521ff123ee"
 
